@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>AortaBnb | Coanfitrião Airbnb</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: #f2f9f7;
+      color: #2d4036;
+    }
+
+    header {
+      background: linear-gradient(135deg, #b6e0d4, #e7f5f0);
+      padding: 2rem 1rem;
+      text-align: center;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2.2rem;
+      color: #205c4e;
+    }
+
+    header p {
+      margin-top: 0.5rem;
+      font-size: 1.1rem;
+      color: #3b554a;
+    }
+
+    section {
+      padding: 2rem 1rem;
+      max-width: 960px;
+      margin: auto;
+    }
+
+    .cta {
+      text-align: center;
+      margin: 2rem 0;
+    }
+
+    .cta a {
+      background-color: #49a691;
+      color: white;
+      padding: 1rem 2rem;
+      text-decoration: none;
+      font-weight: bold;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+      transition: background 0.3s;
+    }
+
+    .cta a:hover {
+      background-color: #3e8b7c;
+    }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 1rem;
+      margin-bottom: 3rem;
+    }
+
+    .gallery img {
+      width: 100%;
+      border-radius: 8px;
+      object-fit: cover;
+      height: 160px;
+    }
+
+    .listing {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    .listing a {
+      text-decoration: none;
+      background: #fff;
+      border: 1px solid #cfe9e3;
+      border-radius: 8px;
+      padding: 1rem;
+      transition: box-shadow 0.3s;
+    }
+
+    .listing a:hover {
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+
+    footer {
+      background: #d3ede4;
+      padding: 1rem;
+      text-align: center;
+      font-size: 0.9rem;
+      color: #2d4036;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>AortaBnb | Coanfitrião Airbnb 🏡</h1>
+    <p>Seu refúgio de paz e tranquilidade. 🧘‍♀️<br>
+    Estadias impecáveis para seu relax total.</p>
+  </header>
+
+  <section class="cta">
+    <a href="#imoveis">Reserve sua calma agora! 👇</a>
+  </section>
+
+  <section>
+    <h2>🌿 Galeria do Condomínio</h2>
+    <div class="gallery">
+      <!-- Substitua os "src" abaixo por links reais -->
+      <img src="https://via.placeholder.com/400x300?text=Piscina" alt="Piscina do condomínio">
+      <img src="https://via.placeholder.com/400x300?text=Jardim" alt="Jardim arborizado">
+      <img src="https://via.placeholder.com/400x300?text=Área+comum" alt="Área comum">
+    </div>
+  </section>
+
+  <section id="imoveis">
+    <h2>🏠 Nossos Imóveis Disponíveis</h2>
+    <div class="listing">
+      <a href="https://www.airbnb.com.br/rooms/123456" target="_blank">
+        🌇 Apartamento Aconchegante com Vista – 2 hóspedes · 1 quarto · Wi-Fi
+      </a>
+      <a href="https://www.airbnb.com.br/rooms/654321" target="_blank">
+        🌴 Studio com Varanda Privativa – 3 hóspedes · Pet Friendly · Ar Cond.
+      </a>
+      <!-- Adicione mais imóveis duplicando as linhas acima -->
+    </div>
+  </section>
+
+  <footer>
+    © 2025 AortaBnb – Criado com calma, para sua calma.
+  </footer>
+</body>
+</html>
