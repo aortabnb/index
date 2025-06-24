@@ -2,241 +2,161 @@
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>AortaBnb | Coanfitrião Airbnb</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AortaBnb - Seu Lar de Férias</title>
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
   <style>
-    :root {
-      --verde-aorta: #42b301;
-      --cinza-claro: #f5f5f5;
-      --cinza-escuro: #333;
-      --branco: #fff;
-    }
-
     * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
+      font-family: sans-serif;
     }
-
     body {
-      font-family: 'Segoe UI', sans-serif;
-      line-height: 1.6;
-      background-color: var(--cinza-claro);
-      color: var(--cinza-escuro);
-    }
-
-    a {
-      text-decoration: none;
-      color: inherit;
-    }
-
-    img {
-      max-width: 100%;
-      display: block;
-      border-radius: 8px;
-    }
-
-    /* HEADER */
-    header {
-      background-color: var(--branco);
-      padding: 1rem 2rem;
-      display: flex;
-      align-items: center;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.05);
-    }
-
-    header img {
-      height: 48px;
-    }
-
-    /* HERO SECTION */
-    .hero {
-      padding: 3rem 2rem;
+      background-color: #fff;
+      color: #1a1a1a;
       text-align: center;
-      background-color: var(--branco);
+      padding: 2rem;
     }
-
-    .hero h1 {
-      font-size: 2rem;
-      color: var(--verde-aorta);
+    header img {
+      width: 120px;
       margin-bottom: 1rem;
     }
-
-    .hero p {
-      font-size: 1.1rem;
-      max-width: 600px;
+    h1 {
+      font-size: 2rem;
+      margin-bottom: 2rem;
+      color: #42b301;
+    }
+    section {
+      max-width: 900px;
       margin: 0 auto;
     }
-
-    /* VIDEO SECTION */
-    .video-section {
-      padding: 2rem;
-      text-align: center;
-    }
-
-    .video-section iframe {
-      width: 100%;
-      max-width: 800px;
-      height: 450px;
-      border: none;
-      border-radius: 8px;
-    }
-
-    /* GALLERY SECTION */
-    .gallery-section {
-      padding: 3rem 2rem;
-      background-color: var(--branco);
-    }
-
-    .gallery-section h2 {
-      text-align: center;
-      color: var(--verde-aorta);
-      margin-bottom: 2rem;
-    }
-
-    .apartment-grid {
+    .grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 2rem;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 1.5rem;
+      margin-bottom: 3rem;
     }
-
-    .apartment-card {
-      background-color: var(--cinza-claro);
+    .card {
+      border: 1px solid #e0e0e0;
       border-radius: 12px;
+      overflow: hidden;
+      transition: transform 0.2s ease;
+      background: #fafafa;
+    }
+    .card:hover {
+      transform: scale(1.02);
+    }
+    .card img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+    .card-content {
       padding: 1rem;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      transition: transform 0.3s ease;
     }
-
-    .apartment-card:hover {
-      transform: translateY(-5px);
-    }
-
-    .apartment-card h3 {
-      margin: 1rem 0 0.5rem;
+    .card-content h2 {
       font-size: 1.2rem;
-      color: #222;
+      color: #1a1a1a;
+      margin-bottom: 0.5rem;
     }
-
-    .apartment-card p {
+    .card-content p {
       font-size: 0.95rem;
-      margin-bottom: 1rem;
+      margin-bottom: 0.8rem;
     }
-
-    .buttons {
-      display: flex;
-      justify-content: space-between;
-      gap: 0.5rem;
+    .card-content a {
+      color: #42b301;
+      text-decoration: none;
+      font-weight: bold;
     }
-
-    .btn {
-      padding: 0.6rem 1rem;
-      border-radius: 6px;
-      font-size: 0.9rem;
-      text-align: center;
-      flex: 1;
-      transition: background 0.3s ease;
-    }
-
-    .btn-details {
-      background-color: #ccc;
-      color: #222;
-    }
-
-    .btn-details:hover {
-      background-color: #bbb;
-    }
-
-    .btn-book {
-      background-color: var(--verde-aorta);
-      color: white;
-    }
-
-    .btn-book:hover {
-      background-color: #369300;
-    }
-
-    /* FOOTER */
     footer {
-      padding: 2rem;
-      text-align: center;
-      background-color: var(--branco);
+      margin-top: 2rem;
       font-size: 0.9rem;
-      color: #555;
-      border-top: 1px solid #ddd;
-    }
-
-    @media (max-width: 600px) {
-      .hero h1 {
-        font-size: 1.6rem;
-      }
-
-      .video-section iframe {
-        height: 240px;
-      }
-
-      .buttons {
-        flex-direction: column;
-      }
+      color: #aaa;
     }
   </style>
 </head>
 <body>
-
-  <!-- HEADER -->
   <header>
-    <img src="[URL_DO_LOGOTIPO_AORTABNB]" alt="Logotipo AortaBnb">
+    <img src="logo.png" alt="Logo AortaBnb">
+    <h1>SEU LAR DE FÉRIAS</h1>
   </header>
 
-  <!-- SEÇÃO DE APRESENTAÇÃO -->
-  <section class="hero">
-    <h1>AortaBnb: Sua Gestão de Imóveis para Aluguel de Temporada</h1>
-    <p>Simplificamos a gestão de seus apartamentos no Airbnb, maximizando seus lucros e cuidando de tudo para você.</p>
-  </section>
-
-  <!-- VÍDEO EXPLICATIVO -->
-  <section class="video-section">
-    <iframe src="[URL_DO_VIDEO_EXPLICATIVO]" frameborder="0" allowfullscreen></iframe>
-  </section>
-
-  <!-- GALERIA DE APARTAMENTOS -->
-  <section class="gallery-section">
-    <h2>Apartamentos que Administramos</h2>
-    <div class="apartment-grid">
-
-      <!-- CARD 1 -->
-      <div class="apartment-card">
-        <img src="[URL_IMAGEM_APARTAMENTO_1]" alt="Apartamento 1">
-        <h3>Apartamento Aconchegante no Centro</h3>
-        <p>Perfeito para casais, com vista incrível e localização privilegiada.</p>
-        <div class="buttons">
-          <a href="[URL_PAGINA_DETALHES_APARTAMENTO_1]" class="btn btn-details">Ver Mais</a>
-          <a href="[URL_ANUNCIO_AIRBNB_APARTAMENTO_1]" target="_blank" class="btn btn-book">Reservar Agora</a>
+  <section>
+    <h2>UNIDADES DISPONÍVEIS</h2>
+    <div class="grid">
+      <div class="card">
+        <img src="2036.png" alt="Apartamento Completo">
+        <div class="card-content">
+          <h2>Apartamento Completo</h2>
+          <p>7 Hóspedes</p>
+          <a href="https://airbnb.com.br/h/aortabnb2036" target="_blank">Ver no Airbnb &gt;</a>
         </div>
       </div>
-
-      <!-- CARD 2 -->
-      <div class="apartment-card">
-        <img src="[URL_IMAGEM_APARTAMENTO_2]" alt="Apartamento 2">
-        <h3>Studio Moderno com Varanda</h3>
-        <p>Ideal para viajantes solo ou home office, com muito conforto e estilo.</p>
-        <div class="buttons">
-          <a href="[URL_PAGINA_DETALHES_APARTAMENTO_2]" class="btn btn-details">Ver Mais</a>
-          <a href="[URL_ANUNCIO_AIRBNB_APARTAMENTO_2]" target="_blank" class="btn btn-book">Reservar Agora</a>
+      <div class="card">
+        <img src="1036.png" alt="Suíte e Quarto de Casal">
+        <div class="card-content">
+          <h2>Suíte e Quarto de Casal</h2>
+          <p>4 Hóspedes</p>
+          <a href="https://airbnb.com.br/h/aortabnb1036" target="_blank">Ver no Airbnb &gt;</a>
         </div>
       </div>
-
+      <div class="card">
+        <img src="1036s.png" alt="Suíte Master">
+        <div class="card-content">
+          <h2>Suíte Master</h2>
+          <p>2 Hóspedes</p>
+          <a href="https://airbnb.com.br/h/aortabnb1036s" target="_blank">Ver no Airbnb &gt;</a>
+        </div>
+      </div>
+      <div class="card">
+        <img src="1036q.png" alt="Quarto de Casal">
+        <div class="card-content">
+          <h2>Quarto de Casal</h2>
+          <p>2 Hóspedes</p>
+          <a href="https://airbnb.com.br/h/aortabnb1036q" target="_blank">Ver no Airbnb &gt;</a>
+        </div>
+      </div>
     </div>
   </section>
 
-  <!-- RODAPÉ -->
-  <footer>
-    Contato: [SEU_EMAIL] · Redes Sociais: [LINK_REDES_SOCIAIS]<br>
-    © 2025 AortaBnb. Todos os direitos reservados.
-  </footer>
+  <section>
+    <h2>O Condomínio Ilhas do Caribe</h2>
+    <p style="margin-bottom: 1.5rem; color: #42b301; font-weight: bold;">RESORT ALTO PADRÃO</p>
+    <div class="grid">
+      <div class="card">
+        <img src="acesso.png" alt="Em frente ao mar">
+        <div class="card-content">
+          <h2>Em frente ao mar - 50m</h2>
+          <p>Acesso direto à praia</p>
+        </div>
+      </div>
+      <div class="card">
+        <img src="familia.png" alt="Atividades para família">
+        <div class="card-content">
+          <h2>Atividades para a família</h2>
+          <p>Piscina, quadras e churrasqueiras</p>
+        </div>
+      </div>
+      <div class="card">
+        <img src="garagem.png" alt="Estacionamento Coberto">
+        <div class="card-content">
+          <h2>Estacionamento coberto</h2>
+          <p>Garagem exclusiva</p>
+        </div>
+      </div>
+      <div class="card">
+        <img src="local.png" alt="Tudo perto de você">
+        <div class="card-content">
+          <h2>Tudo perto de você</h2>
+          <p>Localização privilegiada</p>
+        </div>
+      </div>
+    </div>
+  </section>
 
+  <footer>
+    <p>AortaBnb - Ilhas do Caribe, Matinhos - PR</p>
+  </footer>
 </body>
 </html>
