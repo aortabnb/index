@@ -26,26 +26,30 @@
     header {
       background-color: #42b301;
       width: 100%;
-      padding: 2rem 1rem 3rem;
-      text-align: center;
+      padding: 1rem;
+      text-align: left;
       position: sticky;
       top: 0;
       z-index: 1000;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
     }
 
     header img {
-      width: 60px;
-      height: 60px;
-      margin-bottom: 1rem;
+      width: 40px;
+      height: 40px;
+      margin-right: 1rem;
     }
 
     header h1 {
-      font-size: 2rem;
+      font-size: 1.2rem;
       color: white;
+      margin: 0;
     }
 
     .parallax-bg {
-      background-image: url('fundo2.jpg');
+      background-image: url('fundo.jpg');
       background-attachment: fixed;
       background-position: center;
       background-repeat: no-repeat;
@@ -151,6 +155,13 @@
     }
 
     @media (min-width: 768px) {
+      header h1 {
+        font-size: 1.5rem;
+      }
+      header img {
+        width: 50px;
+        height: 50px;
+      }
       .grid {
         flex-direction: row;
         flex-wrap: wrap;
