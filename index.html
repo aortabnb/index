@@ -6,9 +6,7 @@
   <title>AortaBnb - Seu Lar de Férias</title>
   <meta name="description" content="AortaBnb: Alugue apartamentos de férias de alto padrão no Condomínio Ilhas do Caribe, Matinhos - PR. Confira unidades incríveis à beira-mar!">
   <link rel="icon" href="favicon.png" type="image/x-icon">
-  <!-- Google Fonts: Poppins -->
   <link href="https://fonts.googleapis.com/css?family=Poppins:400,600,700&display=swap" rel="stylesheet">
-  <!-- Open Graph for sharing -->
   <meta property="og:title" content="AortaBnb - Seu Lar de Férias">
   <meta property="og:description" content="Unidades de alto padrão no Condomínio Ilhas do Caribe, Matinhos - PR.">
   <meta property="og:image" content="logo.png">
@@ -36,32 +34,39 @@
       flex-direction: column;
     }
 
-    /* Bleeding Logo Header */
+    /* Header Layout Strictly to Spec */
+    .header-blank {
+      height: 70px;
+      background: #fff;
+      width: 100vw;
+    }
     .main-header {
       width: 100vw;
+      height: 120px;
       background: var(--brand-green);
       position: relative;
-      margin-bottom: 2.5rem;
       overflow: visible;
-      padding-top: 6rem; /* Increased whitespace above green bar */
-      padding-bottom: 2.5rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
     }
     .header-logo-wrapper {
       position: absolute;
-      top: -96px; /* Moves logo further up to increase whitespace */
+      top: -50px; /* 50px up in white, 50px down in green */
       left: 50%;
       transform: translateX(-50%);
-      width: 160px;
-      height: 160px;
+      width: 100px;
+      height: 100px;
       display: flex;
       align-items: center;
       justify-content: center;
       z-index: 10;
-      background: transparent; /* No border, no background, as requested */
+      background: transparent;
     }
     .header-logo-wrapper img {
-      width: 160px;
-      height: 160px;
+      width: 100px;
+      height: 100px;
       object-fit: contain;
       display: block;
       background: transparent;
@@ -69,16 +74,16 @@
       box-shadow: none;
     }
     .main-header-content {
+      margin-top: 70px; /* 50px for logo bleed + 20px for spacing below */
       display: flex;
       flex-direction: column;
       align-items: center;
-      justify-content: center;
     }
     .main-header h1 {
       color: #fff;
       font-size: 2.5rem;
       font-weight: 700;
-      margin: 4rem 0 0.5rem 0;
+      margin: 0 0 0.5rem 0;
       letter-spacing: 1px;
     }
     .main-header p {
@@ -195,6 +200,12 @@
 
     /* Responsive */
     @media (min-width: 700px) {
+      .main-header h1 {
+        font-size: 3rem;
+      }
+      .main-header-content {
+        margin-top: 70px;
+      }
       .grid {
         flex-direction: column;
         gap: 2.5rem;
@@ -208,28 +219,10 @@
         width: 100px;
         height: 100px;
       }
-      .main-header {
-        padding-top: 8rem;
-        padding-bottom: 3.5rem;
-      }
-      .header-logo-wrapper {
-        width: 200px;
-        height: 200px;
-        top: -120px;
-      }
-      .header-logo-wrapper img {
-        width: 200px;
-        height: 200px;
-      }
-      .main-header h1 {
-        font-size: 3rem;
-        margin-top: 5rem;
-      }
     }
     @media (max-width: 480px) {
       .main-header h1 {
         font-size: 1.4rem;
-        margin-top: 2.5rem;
       }
       .section-title {
         font-size: 1.2rem;
@@ -243,13 +236,16 @@
         height: 60px;
       }
       .header-logo-wrapper {
-        width: 90px;
-        height: 90px;
-        top: -45px;
+        width: 70px;
+        height: 70px;
+        top: -35px;
       }
       .header-logo-wrapper img {
-        width: 90px;
-        height: 90px;
+        width: 70px;
+        height: 70px;
+      }
+      .main-header-content {
+        margin-top: 55px;
       }
     }
 
@@ -391,9 +387,9 @@
 </head>
 <body>
   <a href="#maincontent" class="skip-link">Pular para o conteúdo</a>
+  <div class="header-blank"></div>
   <header class="main-header" role="banner">
     <div class="header-logo-wrapper" aria-label="Logo AortaBnb">
-      <!-- Use original logo file as-is, no styling -->
       <img src="logo.png" alt="AortaBnb Logo" loading="eager">
     </div>
     <div class="main-header-content">
